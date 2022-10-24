@@ -1,0 +1,56 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.CrearEditarVeterinarioModel
+@{
+    int veterinarioId = Model.veterinario.Id;
+    string titulo = veterinarioId > 0 ? "Editar Veterinario" : "Crear Veterinario";
+    ViewData["Title"] = titulo;
+}
+<div class="container">
+
+    <div class="card w-75 mx-auto my-5">
+        <h5 class="card-header">@titulo</h5>
+        <div class="card-body">
+            <form method="post">
+                <div class="form-row">
+
+                    <input type="hidden" asp-for="veterinario.Id">
+
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="veterinario.Cedula"></label>
+                        <input asp-for="veterinario.Cedula" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="veterinario.Nombres"></label>
+                        <input asp-for="veterinario.Nombres" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="veterinario.Apellidos"></label>
+                        <input asp-for="veterinario.Apellidos" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="veterinario.Direccion"></label>
+                        <input asp-for="veterinario.Direccion" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="veterinario.Telefono"></label>
+                        <input asp-for="veterinario.Telefono" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="veterinario.TarjetaProfesional"></label>
+                        <input asp-for="veterinario.TarjetaProfesional" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <a class="btn btn-info w-100" asp-page="./ListaVeterinarios">
+                            <img src="~/images/arrow-go-back-fill.png" alt="Regresar">
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-success w-100">
+                            <img src="~/images/save-line.png" alt="Guardar">
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

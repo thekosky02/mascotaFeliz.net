@@ -1,0 +1,23 @@
+﻿@page
+@model MascotaFeliz.App.Frontedn.Pages.EliminarVeterinarioModel
+@{
+    ViewData["Title"] = "Eliminar Veterinario";
+}
+<div class="container">
+
+    <div class="card mi-w-card my-5">
+        <h5 class="card-header">Eliminar Veterinario</h5>
+        <div class="card-body">
+            <p class="card-text">Está seguro que desea eliminar a @Model.veterinario.Nombres @Model.veterinario.Apellidos?, tenga en cuanta que esta acción es irreversible.</p>
+            <form method="post">
+                <input type="hidden" asp-for="veterinario.Id">
+                <a asp-page="./ListaVeterinarios" class="btn btn-info mr-3">
+                    <img src="~/images/arrow-go-back-fill.png" alt="Regresar">
+                </a>
+                <button type="submit" class="btn btn-danger float-right">
+                    <img src="~/images/delete-bin-2-fill.png" alt="Eliminar">
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

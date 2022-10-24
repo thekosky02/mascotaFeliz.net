@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="5000">
+            <img src="~/images/img1.jpg" class="d-block w-100 mi-img-carousel" alt="img1">
+        </div>
+        <div class="carousel-item" data-interval="5000">
+            <img src="~/images/img2.jpg" class="d-block w-100 mi-img-carousel" alt="img2">
+        </div>
+        <div class="carousel-item" data-interval="5000">
+            <img src="~/images/img3.jpg" class="d-block w-100 mi-img-carousel" alt="img3">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 p-5 d-flex justify-content-center align-items-center"><img class="w-100 h-100 rounded-circle" src="~/images/veterinarian-check.jpg" alt=""></div>
+        <div class="col-12 col-md-6 p-5 d-flex flex-column justify-content-center align-items-center">
+            <h2>Nuestro compromiso <span class="text-warning">es con las mascotas</span></h2>
+            <p>El equipo médico todos los días se prepara para brindar el mejor servicio a las mascotas que lo necesiten. Es fundamental en nuestra filosofía encontrar una respuesta a todos los que nos consultan por el bienestar, salud, higiene y nutrición de sus perros o gatos.</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+.cont-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px 0px;
+    justify-content: space-around;
+}
+
+.cont-info img {
+    width: 80%;
+    height: 100%;
+    margin: 0px 10%;
+    border-radius: 100%;
+    align-self: center;
+    flex-grow: 1;
+    box-shadow: 2px 2px 4px 2px #ddd;
+}
+
+.cont-info .text {
+    margin: 5%;
+    width: 30%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.cont-info .text h2 {
+    font-size: 35px;
+}
+
+.cont-info .text h2 span {
+    color: #e59201;
+}
+
+.cont-info .text p {
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .cont-info img {
+        width: 30%;
+        margin: 0px 10%;
+    }
+}

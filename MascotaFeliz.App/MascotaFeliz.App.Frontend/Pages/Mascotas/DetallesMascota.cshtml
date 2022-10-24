@@ -1,0 +1,63 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.DetallesMascotaModel
+@{
+    ViewData["Title"] = "Detalles Mascota";
+}
+<div class="container">
+
+    <div class="card mi-w-card my-5">
+        <h5 class="card-header">Detalles Dueño</h5>
+        <div class="card-body">
+            <div class="row px-5">
+
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Id:</p>
+                    <p>@Model.mascota.Id</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Nombre:</p>
+                    <p>@Model.mascota.Nombre</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Color:</p>
+                    <p>@Model.mascota.Color</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Especie:</p>
+                    <p>@Model.mascota.Especie</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Raza:</p>
+                    <p>@Model.mascota.Raza</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Dueño:</p>
+                    @try
+                    {
+                        <p>@Model.mascota.Dueno.Nombres @Model.mascota.Dueno.Apellidos</p>
+                    }
+                    catch (System.Exception)
+                    {
+                        <p>Dueño no asignado</p>
+                    }
+                </div>
+                <div class="col-12">
+                    <p class="font-weight-bold mb-0">Veterinario:</p>
+                    @try
+                    {
+                        <p>@Model.mascota.Veterinario.Nombres @Model.mascota.Veterinario.Apellidos</p>
+                    }
+                    catch (System.Exception)
+                    {
+                        <p>Veterinario no asignado</p>
+                    }
+                </div>
+                <div class="col-12">
+                    <a class="btn btn-info w-100" asp-page="./ListaMascotas">
+                        <img src="~/images/arrow-go-back-fill.png" alt="Regresar">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

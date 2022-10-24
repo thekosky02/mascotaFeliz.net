@@ -1,0 +1,50 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.DetallesduenoModel
+@{
+    ViewData["Title"] = "Detalles Dueño";
+}
+<div class="container">
+
+    <div class="card mi-w-card my-5">
+        <h5 class="card-header">Detalles Dueño</h5>
+        <div class="card-body">
+            <div class="row px-5">
+
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Id:</p>
+                    <p>@Model.dueno.Id</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Cedula:</p>
+                    <p>@Model.dueno.Cedula</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Nombres:</p>
+                    <p>@Model.dueno.Nombres</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Apellidos:</p>
+                    <p>@Model.dueno.Apellidos</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Dirección:</p>
+                    <p>@Model.dueno.Direccion</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Telefono:</p>
+                    <p>@Model.dueno.Telefono</p>
+                </div>
+                <div class="col-12">
+                    <p class="font-weight-bold mb-0">Correo:</p>
+                    <p>@Model.dueno.Correo</p>
+                </div>
+                <div class="col-12">
+                    <a class="btn btn-info w-100" asp-page="./Listaduenos">
+                        <img src="~/images/arrow-go-back-fill.png" alt="Regresar">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

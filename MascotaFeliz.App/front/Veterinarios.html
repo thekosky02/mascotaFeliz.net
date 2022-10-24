@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinarios</title>
+    <link rel="shortcut icon" href="./images/hp-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/Tablas.css">
+    <link rel="stylesheet" href="./styles/modales.css">
+    <link rel="stylesheet" href="./styles/formularios.css">
+    <link rel="stylesheet" href="./styles/botones.css">
+    <link rel="stylesheet" href="./styles/NavBar.css">
+    <link rel="stylesheet" href="./styles/footers.css">
+</head>
+<body>
+    <nav id="navBar" class="navBar">
+        <input type="checkbox" id="check-nav">
+        <label for="check-nav" class="checkMenu">
+            <img src="./images/menu-line.png" alt="menu">
+        </label>
+        <a href="./index.html" class="enlace">
+            <img src="./images/hp-removebg-preview.png" alt="logo">
+        </a>
+        <div class="list-a">
+            <a href="./Mascotas.html">MASCOTAS</a>
+            <a href="./Duenos.html">DUEÑOS</a>
+            <a class="activo" href="./Veterinarios.html">VETERINARIOS</a>
+        </div>
+    </nav>
+    <main>
+
+        <div class="cont-botones">
+            <a class="btn" href="#modal-registrar">Registrar Veterinario</a>
+            <a class="btn" href="#modal-consultar">Consultar Veterinario</a>
+            <button class="btn btn-list">Enlistar Veterinarios</button>
+        </div>
+
+        <div id="modal-registrar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Registrar Veterinario:</h2>
+                <form class="formulario">
+
+                    <label for="inRegCedulaVeterinario">Cedula Veterinario:</label>
+                    <input type="text" id="inRegCedulaVeterinario">
+
+                    <label for="inRegNombresVeterinario">Nombres Veterinario:</label>
+                    <input type="text" id="inRegNombresVeterinario">
+            
+                    <label for="inRegApellidosVeterinario">Apellidos Veterinario:</label>
+                    <input type="text" id="inRegApellidosVeterinario">
+            
+                    <label for="inRegDireccionVeterinario">Dirección Veterinario:</label>
+                    <input type="text" id="inRegDireccionVeterinario">
+            
+                    <label for="inRegTelefonoVeterinario">Telefono Veterinario:</label>
+                    <input type="text" id="inRegTelefonoVeterinario">
+            
+                    <label for="inRegTerjetaVeterinario">Tarjeta Veterinario:</label>
+                    <input type="text" id="inRegTerjetaVeterinario">
+            
+                    <input type="submit" class="btn" value="Registrar">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-editar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Editar Veterinario:</h2>
+                <form class="formulario">
+
+                    <label for="inEditCedulaVeterinario">Cedula Veterinario:</label>
+                    <input type="text" id="inEditCedulaVeterinario">
+
+                    <label for="inEditNombresVeterinario">Nombres Veterinario:</label>
+                    <input type="text" id="inEditNombresVeterinario">
+            
+                    <label for="inEditApellidosVeterinario">Apellidos Veterinario:</label>
+                    <input type="text" id="inEditApellidosVeterinario">
+            
+                    <label for="inEditDireccionVeterinario">Dirección Veterinario:</label>
+                    <input type="text" id="inEditDireccionVeterinario">
+            
+                    <label for="inEditTelefonoVeterinario">Telefono Veterinario:</label>
+                    <input type="text" id="inEditTelefonoVeterinario">
+            
+                    <label for="inEditTerjetaVeterinario">Tarjeta Veterinario:</label>
+                    <input type="text" id="inEditTerjetaVeterinario">
+            
+                    <input type="submit" class="btn" value="Editar">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-consultar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Consultar Veterinario:</h2>
+                <form class="formulario">
+                    <label for="inconsulIdVeterinario">Id Veterinario:</label>
+                    <input type="text" id="inconsulIdVeterinario">
+            
+                    <input type="submit" class="btn" value="Consultar">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-eliminar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Eliminar Veterinario:</h2>
+                <p>Esta seguro de eliminar este Registro?</p>
+                <button class="btn btn-sip">Sip!</button>
+                <a class="btn btn-nope" href="#cerrar">Nope!</a>
+            </div>
+        </div>
+
+        <div class="cont-tabla">
+            <table class="tabla">
+                <tr>
+                    <th>Id</th>
+                    <th>Cedula</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Dirección</th>
+                    <th>Telefono</th>
+                    <th>Tarjeta profecional</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>123456789</td>
+                    <td>Elena Maribel</td>
+                    <td>Hernandez Rodriguez</td>
+                    <td>cll. 2 Av.15</td>
+                    <td>300124834</td>
+                    <td>Veterinaria Hernandez</td>
+                    <td>
+                        <a class="btn-a" href="#modal-editar">
+                            <img src="./images/pencil-fill.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn-a" href="#modal-eliminar">
+                            <img src="./images/delete-bin-5-line.png" alt="eliminar">
+                        </q>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>123456789</td>
+                    <td>Elena Maribel</td>
+                    <td>Hernandez Rodriguez</td>
+                    <td>cll. 2 Av.15</td>
+                    <td>300124834</td>
+                    <td>Veterinaria Hernandez</td>
+                    <td>
+                        <a class="btn-a" href="#modal-editar">
+                            <img src="./images/pencil-fill.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn-a" href="#modal-eliminar">
+                            <img src="./images/delete-bin-5-line.png" alt="eliminar">
+                        </q>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>123456789</td>
+                    <td>Elena Maribel</td>
+                    <td>Hernandez Rodriguez</td>
+                    <td>cll. 2 Av.15</td>
+                    <td>300124834</td>
+                    <td>Veterinaria Hernandez</td>
+                    <td>
+                        <a class="btn-a" href="#modal-editar">
+                            <img src="./images/pencil-fill.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn-a" href="#modal-eliminar">
+                            <img src="./images/delete-bin-5-line.png" alt="eliminar">
+                        </q>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer class="footer footer-bottom">
+        CONSULTA GENERAL | CONSULTA ESPECIALIZADA VETERINARIA | CARDIOLOGÍA VETERINARIA | DERMATOLOGÍA VETERINARIA | MÉTODOS DIAGNÓSTICOS | RAYOS X DIGITAL | ECOGRAFÍA | ENDOSCOPIA VETERINARIA | LABORATORIO CLÍNICO VETERINARIO | HEMOGRAMAS | QUÍMICAS SANGUÍNEAS | SDMA - DIAGNÓSTICO TEMPRANO DE INSUFICIENCIA RENAL | T 4 CANINA - DIAGNÓSTICO DE HIPOTIROIDISMO | PRUEBAS DE CORTISOL - DIAGNÓSTICO DE CUSHING | UPC - DIAGNÓSTICO DE ENFERMEDAD RENAL | PATOLOGÍA Y BIOPSIAS | MEDICIÓN DE PRESIÓN ARTERIAL DIGITAL | CIRUGÍA VETERINARIA GENERAL & ESPECIALIZADA | HOSPITALIZACIÓN MONITOREADA 7/24 | DIÁLISIS PERITONEAL | K-LÁSER - TÉCNICA INNOVADORA PARA EL MANEJO DEL DOLOR E INFLAMACIÓN | SERVICIO DE BAÑO Y PELUQUERÍA COSMÉTICO Y TERAPÉUTICO | DROGUERÍA VETERINARIA | MEDICINA FELINA ESPECIALIZADA | ONCOLOGÍA VETERINARIA | HOSPITALIZACIÓN Y CUIDADOS INTERMEDIOS | MEDICINA INTERNA VETERINARIA |
+    </footer>
+</body>
+</html>

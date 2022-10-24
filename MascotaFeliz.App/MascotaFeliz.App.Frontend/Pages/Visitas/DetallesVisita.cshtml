@@ -1,0 +1,67 @@
+﻿@page
+@model MascotaFeliz.App.Frontedn.Pages.DetallesVisitaModel
+@{
+    ViewData["Title"] = "Detalles visita";
+}
+
+<div class="container">
+
+    <div class="card mi-w-card mi-w-card-vs my-5">
+        <h5 class="card-header">Detalles Visita</h5>
+        <div class="card-body">
+            <div class="row px-5">
+
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Id:</p>
+                    <p>@Model.visita.Id</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Fecha visita:</p>
+                    <p>@Model.visita.FechaVisita</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Temperatura:</p>
+                    <p>@Model.visita.Temperatura</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Peso:</p>
+                    <p>@Model.visita.Peso</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Frecuencia respiratoria:</p>
+                    <p>@Model.visita.FrecuenciaRespiratoria</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Frecuencia cardiaca:</p>
+                    <p>@Model.visita.FrecuenciaCardiaca</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Estado de animo:</p>
+                    <p>@Model.visita.EstadoAnimo</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Veterinario:</p>
+                    @try
+                    {
+                        <p>@Model.veterinario.Nombres @Model.veterinario.Apellidos</p>
+                    }
+                    catch (System.Exception)
+                    {
+                        <p>Veterinario no asignado</p>
+                    }
+                </div>
+                <div class="col-12">
+                    <p class="font-weight-bold mb-0">Recomendaciones:</p>
+                    <p>@Model.visita.Recomendaciones</p>
+                </div>
+                <div class="col-12">
+                    <a class="btn btn-info w-100" asp-page="../Historias/HistoriaClinica" asp-route-historiaId="@Model.historia.Id" asp-route-mascotaId="@Model.mascota.Id">
+                        <img src="~/images/arrow-go-back-fill.png" alt="Regresar">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+

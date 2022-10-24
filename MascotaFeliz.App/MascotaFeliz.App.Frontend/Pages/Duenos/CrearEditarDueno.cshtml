@@ -1,0 +1,56 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.CrearEditarDuenoModel
+@{
+    int duenoId = Model.dueno.Id;
+    string titulo = duenoId > 0 ? "Editar Dueño" : "Crear Dueño";
+    ViewData["Title"] = titulo;
+}
+<div class="container">
+
+    <div class="card w-75 mx-auto my-5">
+        <h5 class="card-header">@titulo</h5>
+        <div class="card-body">
+            <form method="post">
+                <div class="form-row">
+
+                    <input type="hidden" asp-for="dueno.Id">
+
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="dueno.Cedula"></label>
+                        <input asp-for="dueno.Cedula" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="dueno.Nombres"></label>
+                        <input asp-for="dueno.Nombres" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="dueno.Apellidos"></label>
+                        <input asp-for="dueno.Apellidos" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="dueno.Direccion"></label>
+                        <input asp-for="dueno.Direccion" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="dueno.Telefono"></label>
+                        <input asp-for="dueno.Telefono" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="dueno.Correo"></label>
+                        <input asp-for="dueno.Correo" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <a class="btn btn-info w-100" asp-page="./Listaduenos">
+                            <img src="~/images/arrow-go-back-fill.png" alt="Regresar">
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-success w-100">
+                            <img src="~/images/save-line.png" alt="Guardar">
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

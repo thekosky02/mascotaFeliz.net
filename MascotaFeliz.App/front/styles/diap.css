@@ -1,0 +1,61 @@
+.cont-diaps {
+    width: 100%;
+    min-height: 300px;
+    max-height: 500px;
+    margin-top: 74px;
+    overflow: hidden;
+}
+
+.diaps {
+    width: 300%;
+    display: flex;
+}
+
+.diaps input {
+    display: none;
+}
+
+.diap {
+    width: 33.33333333%;
+    transition: 1s;
+}
+
+.diap img {
+    width: 100%;
+    min-height: 300px;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.nav-diap {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.diap-btn {
+    border: 2px solid #09a9c1;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin: 0px 10px;
+}
+
+.diap-btn:hover {
+    background-color: #09a9c1;
+}
+
+#radio1:checked ~ .primer-diap {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .primer-diap {
+    margin-left: -33.33333333%;
+}
+
+#radio3:checked ~ .primer-diap {
+    margin-left: -66.66666666%;
+}

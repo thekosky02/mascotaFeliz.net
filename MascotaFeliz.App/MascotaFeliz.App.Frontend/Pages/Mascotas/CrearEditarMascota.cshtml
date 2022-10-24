@@ -1,0 +1,71 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.CrearEditarMascotaModel
+@{
+    int mascotaId = @Model.mascota.Id;
+    string titulo = mascotaId > 0 ? "Editar Mascota" : "Crear Mascota";
+    ViewData["Title"] = titulo;
+}
+<div class="container">
+
+    <div class="card w-75 mx-auto my-5">
+        <h5 class="card-header">@titulo</h5>
+        <div class="card-body">
+            <form method="post">
+                <div class="form-row">
+
+                    <input type="hidden" asp-for="mascota.Id">
+                    <input type="hidden" asp-for="historia.Id">
+                    <input type="hidden" asp-for="historia.FechaInicial">
+
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="mascota.Nombre"></label>
+                        <input asp-for="mascota.Nombre" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="mascota.Color"></label>
+                        <input asp-for="mascota.Color" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="mascota.Especie"></label>
+                        <input asp-for="mascota.Especie" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label asp-for="mascota.Raza"></label>
+                        <input asp-for="mascota.Raza" class="form-control">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label for="dueno">Dueño</label>
+                        <select id="dueno" asp-for="mascota.Dueno.Id" name="duenoId" class="form-control">
+                            <option value="0">Seleccione un Dueño</option>
+                            @foreach (var d in Model.listaDuenos)
+                            {
+                                <option value="@d.Id">@d.Nombres @d.Apellidos</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label for="veterinario">Veterinario</label>
+                        <select id="veterinario" asp-for="mascota.Veterinario.Id" name="veterinarioId" class="form-control">
+                            <option value="0">Seleccione un Veterinario</option>
+                            @foreach (var v in Model.listaVeterinarios)
+                            {
+                                <option value="@v.Id">@v.Nombres @v.Apellidos</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <a class="btn btn-info w-100" asp-page="./ListaMascotas">
+                            <img src="~/images/arrow-go-back-fill.png" alt="Regresar">
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-success w-100">
+                            <img src="~/images/save-line.png" alt="Guardar">
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

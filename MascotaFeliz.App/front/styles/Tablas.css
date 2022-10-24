@@ -1,0 +1,22 @@
+.cont-tabla {
+    overflow-x: auto;
+}
+
+.tabla {
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.tabla td, .tabla th {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+
+.tabla tr:nth-child(even) {
+    background-color: #eeeeee;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas</title>
+    <link rel="shortcut icon" href="./images/hp-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/Tablas.css">
+    <link rel="stylesheet" href="./styles/modales.css">
+    <link rel="stylesheet" href="./styles/formularios.css">
+    <link rel="stylesheet" href="./styles/botones.css">
+    <link rel="stylesheet" href="./styles/NavBar.css">
+    <link rel="stylesheet" href="./styles/footers.css">
+</head>
+<body>
+    <nav id="navBar" class="navBar">
+        <input type="checkbox" id="check-nav">
+        <label for="check-nav" class="checkMenu">
+            <img src="./images/menu-line.png" alt="menu">
+        </label>
+        <a href="./index.html" class="enlace">
+            <img src="./images/hp-removebg-preview.png" alt="logo">
+        </a>
+        <div class="list-a">
+            <a class="activo" href="./Mascotas.html">MASCOTAS</a>
+            <a href="./Duenos.html">DUEÑOS</a>
+            <a href="./Veterinarios.html">VETERINARIOS</a>
+        </div>
+    </nav>
+    <main>
+
+        <div class="cont-botones">
+            <a class="btn" href="#modal-registrar">Registrar Mascota</a>
+            <a class="btn" href="#modal-consultar">Consultar Mascota</a>
+            <button class="btn btn-list">Enlistar Mascotas</button>
+        </div>
+
+        <div id="modal-registrar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Registrar Mascota:</h2>
+                <form class="formulario">
+                    <label for="inRegNombreMascota">Nombre Mascota:</label>
+                    <input type="text" id="inRegNombreMascota">
+            
+                    <label for="inRegColorMascota">Color Mascota:</label>
+                    <input type="text" id="inRegColorMascota">
+            
+                    <label for="inRegEspecieMascota">Especie Mascota:</label>
+                    <input type="text" id="inRegEspecieMascota">
+            
+                    <label for="inRegRazaMascota">Raza Mascota:</label>
+                    <input type="text" id="inRegRazaMascota">
+            
+                    <label for="inRegDuenoMascota">Dueño Mascota:</label>
+                    <input type="text" id="inRegDuenoMascota">
+            
+                    <label for="inRegVeterinarioMascota">Veterinario Mascota:</label>
+                    <input type="text" id="inRegVeterinarioMascota">
+            
+                    <label for="inRegHistoriaMascota">Historia Mascota:</label>
+                    <input type="text" id="inRegHistoriaMascota">
+            
+                    <input type="submit" class="btn" value="Registrar">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-editar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Editar Mascota:</h2>
+                <form class="formulario">
+                    <label for="inEditNombreMascota">Nombre Mascota:</label>
+                    <input type="text" id="inEditNombreMascota">
+            
+                    <label for="inEditColorMascota">Color Mascota:</label>
+                    <input type="text" id="inEditColorMascota">
+            
+                    <label for="inEditEspecieMascota">Especie Mascota:</label>
+                    <input type="text" id="inEditEspecieMascota">
+            
+                    <label for="inEditRazaMascota">Raza Mascota:</label>
+                    <input type="text" id="inEditRazaMascota">
+            
+                    <label for="inEditDuenoMascota">Dueño Mascota:</label>
+                    <input type="text" id="inEditDuenoMascota">
+            
+                    <label for="inEditVeterinarioMascota">Veterinario Mascota:</label>
+                    <input type="text" id="inEditVeterinarioMascota">
+            
+                    <label for="inEditHistoriaMascota">Historia Mascota:</label>
+                    <input type="text" id="inEditHistoriaMascota">
+            
+                    <input type="submit" class="btn" value="Editar">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-consultar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Consultar Mascota:</h2>
+                <form class="formulario">
+                    <label for="inConsulIdMascota">Id Mascota:</label>
+                    <input type="text" id="inConsulIdMascota">
+            
+                    <input type="submit" class="btn" value="Consultar">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-eliminar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Eliminar Mascota:</h2>
+                <p>Esta seguro de eliminar este Registro?</p>
+                <button class="btn btn-sip">Sip!</button>
+                <a class="btn btn-nope" href="#cerrar">Nope!</a>
+            </div>
+        </div>
+
+        <div class="cont-tabla">
+            <table class="tabla">
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Color</th>
+                    <th>Especie</th>
+                    <th>Raza</th>
+                    <th>Dueño</th>
+                    <th>Veterinario</th>
+                    <th>Historia</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>puppy</td>
+                    <td>blanco</td>
+                    <td>gato</td>
+                    <td>siames</td>
+                    <td>Marcos Hernandez</td>
+                    <td>Felipe Ozorio</td>
+                    <td>3</td>
+                    <td>
+                        <a class="btn-a" href="#modal-editar">
+                            <img src="./images/pencil-fill.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn-a" href="#modal-eliminar">
+                            <img src="./images/delete-bin-5-line.png" alt="eliminar">
+                        </q>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>michelin</td>
+                    <td>amarillo con manchas</td>
+                    <td>gato</td>
+                    <td>vengala</td>
+                    <td>Marcos Hernandez</td>
+                    <td>Felipe Ozorio</td>
+                    <td>3</td>
+                    <td>
+                        <a class="btn-a" href="#modal-editar">
+                            <img src="./images/pencil-fill.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn-a" href="#modal-eliminar">
+                            <img src="./images/delete-bin-5-line.png" alt="eliminar">
+                        </q>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>castrin</td>
+                    <td>marrón</td>
+                    <td>perro</td>
+                    <td>pastor aleman</td>
+                    <td>Marcos Hernandez</td>
+                    <td>Felipe Ozorio</td>
+                    <td>3</td>
+                    <td>
+                        <a class="btn-a" href="#modal-editar">
+                            <img src="./images/pencil-fill.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn-a" href="#modal-eliminar">
+                            <img src="./images/delete-bin-5-line.png" alt="eliminar">
+                        </q>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer class="footer footer-bottom">
+        CONSULTA GENERAL | CONSULTA ESPECIALIZADA VETERINARIA | CARDIOLOGÍA VETERINARIA | DERMATOLOGÍA VETERINARIA | MÉTODOS DIAGNÓSTICOS | RAYOS X DIGITAL | ECOGRAFÍA | ENDOSCOPIA VETERINARIA | LABORATORIO CLÍNICO VETERINARIO | HEMOGRAMAS | QUÍMICAS SANGUÍNEAS | SDMA - DIAGNÓSTICO TEMPRANO DE INSUFICIENCIA RENAL | T 4 CANINA - DIAGNÓSTICO DE HIPOTIROIDISMO | PRUEBAS DE CORTISOL - DIAGNÓSTICO DE CUSHING | UPC - DIAGNÓSTICO DE ENFERMEDAD RENAL | PATOLOGÍA Y BIOPSIAS | MEDICIÓN DE PRESIÓN ARTERIAL DIGITAL | CIRUGÍA VETERINARIA GENERAL & ESPECIALIZADA | HOSPITALIZACIÓN MONITOREADA 7/24 | DIÁLISIS PERITONEAL | K-LÁSER - TÉCNICA INNOVADORA PARA EL MANEJO DEL DOLOR E INFLAMACIÓN | SERVICIO DE BAÑO Y PELUQUERÍA COSMÉTICO Y TERAPÉUTICO | DROGUERÍA VETERINARIA | MEDICINA FELINA ESPECIALIZADA | ONCOLOGÍA VETERINARIA | HOSPITALIZACIÓN Y CUIDADOS INTERMEDIOS | MEDICINA INTERNA VETERINARIA |
+    </footer>
+</body>
+</html>

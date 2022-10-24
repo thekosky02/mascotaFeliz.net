@@ -1,0 +1,50 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.DetallesVeterinarioModel
+@{
+    ViewData["Title"] = "Detalles Veterinario";
+}
+<div class="container">
+    
+    <div class="card mi-w-card my-5">
+        <h5 class="card-header">Detalles Veterinario</h5>
+        <div class="card-body">
+            <div class="row px-5">
+
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Id:</p>
+                    <p>@Model.veterinario.Id</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Cedula:</p>
+                    <p>@Model.veterinario.Cedula</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Nombres:</p>
+                    <p>@Model.veterinario.Nombres</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Apellidos:</p>
+                    <p>@Model.veterinario.Apellidos</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Dirección:</p>
+                    <p>@Model.veterinario.Direccion</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="font-weight-bold mb-0">Telefono:</p>
+                    <p>@Model.veterinario.Telefono</p>
+                </div>
+                <div class="col-12">
+                    <p class="font-weight-bold mb-0">Correo:</p>
+                    <p>@Model.veterinario.TarjetaProfesional</p>
+                </div>
+                <div class="col-12">
+                    <a class="btn btn-info w-100" asp-page="./ListaVeterinarios">
+                        <img src="~/images/arrow-go-back-fill.png" alt="Regresar">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

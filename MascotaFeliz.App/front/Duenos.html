@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dueños</title>
+    <link rel="shortcut icon" href="./images/hp-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/Tablas.css">
+    <link rel="stylesheet" href="./styles/modales.css">
+    <link rel="stylesheet" href="./styles/formularios.css">
+    <link rel="stylesheet" href="./styles/botones.css">
+    <link rel="stylesheet" href="./styles/NavBar.css">
+    <link rel="stylesheet" href="./styles/footers.css">
+</head>
+<body>
+    <nav id="navBar" class="navBar">
+        <input type="checkbox" id="check-nav">
+        <label for="check-nav" class="checkMenu">
+            <img src="./images/menu-line.png" alt="menu">
+        </label>
+        <a href="./index.html" class="enlace">
+            <img src="./images/hp-removebg-preview.png" alt="logo">
+        </a>
+        <div class="list-a">
+            <a href="./Mascotas.html">MASCOTAS</a>
+            <a class="activo" href="./Duenos.html">DUEÑOS</a>
+            <a href="./Veterinarios.html">VETERINARIOS</a>
+        </div>
+    </nav>
+    <main>
+
+        <div class="cont-botones">
+            <a class="btn" href="#modal-registrar">Registrar Dueño</a>
+            <a class="btn" href="#modal-consultar">Consultar Dueño</a>
+            <button class="btn btn-list">Enlistar Dueños</button>
+        </div>
+
+        <div id="modal-registrar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Registrar Dueño:</h2>
+                <form class="formulario">
+                    <label for="inRegCedulaDueno">Cedula Dueño:</label>
+                    <input type="text" id="inRegCedulaDueno">
+
+                    <label for="inRegNombresDueno">Nombres Dueño:</label>
+                    <input type="text" id="inRegNombresDueno">
+            
+                    <label for="inRegApellidosDueno">Apellidos Dueño:</label>
+                    <input type="text" id="inRegApellidosDueno">
+            
+                    <label for="inRegDireccionDueno">Dirección Dueño:</label>
+                    <input type="text" id="inRegDireccionDueno">
+            
+                    <label for="inRegTelefonoDueno">Telefono Dueño:</label>
+                    <input type="text" id="inRegTelefonoDueno">
+            
+                    <label for="inRegCorreoDueno">Correo Dueño:</label>
+                    <input type="text" id="inRegCorreoDueno">
+            
+                    <input type="submit" class="btn" value="Registrar">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-editar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Editar Dueño:</h2>
+                <form class="formulario">
+
+                    <label for="inEditCedulaDueno">Cedula Dueño:</label>
+                    <input type="text" id="inEditCedulaDueno">
+
+                    <label for="inEditNombresDueno">Nombres Dueño:</label>
+                    <input type="text" id="inEditNombresDueno">
+            
+                    <label for="inEditApellidosDueno">Apellidos Dueño:</label>
+                    <input type="text" id="inEditApellidosDueno">
+            
+                    <label for="inEditDireccionDueno">Dirección Dueño:</label>
+                    <input type="text" id="inEditDireccionDueno">
+            
+                    <label for="inEditTelefonoDueno">Telefono Dueño:</label>
+                    <input type="text" id="inEditTelefonoDueno">
+            
+                    <label for="inEditCorreoDueno">Correo Dueño:</label>
+                    <input type="text" id="inEditCorreoDueno">
+            
+                    <input type="submit" class="btn" value="Editar">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-consultar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Consultar Dueño:</h2>
+                <form class="formulario">
+                    <label for="inconsulIdDueno">Id Dueño:</label>
+                    <input type="text" id="inconsulIdDueno">
+            
+                    <input type="submit" class="btn" value="Consultar">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-eliminar" class="modal-form">
+            <div class="caja-modal mover-modal">
+                <a href="#cerrar" title="cerrar" class="cerrar">X</a>
+
+                <h2>Eliminar Dueño:</h2>
+                <p>Esta seguro de eliminar este Registro?</p>
+                <button class="btn btn-sip">Sip!</button>
+                <a class="btn btn-nope" href="#cerrar">Nope!</a>
+            </div>
+        </div>
+
+        <div class="cont-tabla">
+            <table class="tabla">
+                <tr>
+                    <th>Id</th>
+                    <th>Cedula</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Dirección</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>123456789</td>
+                    <td>Elena Maribel</td>
+                    <td>Hernandez Rodriguez</td>
+                    <td>cll. 2 Av.15</td>
+                    <td>300124834</td>
+                    <td>EleHer@gmail.com</td>
+                    <td>
+                        <a class="btn-a" href="#modal-editar">
+                            <img src="./images/pencil-fill.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn-a" href="#modal-eliminar">
+                            <img src="./images/delete-bin-5-line.png" alt="eliminar">
+                        </q>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>123456789</td>
+                    <td>Elena Maribel</td>
+                    <td>Hernandez Rodriguez</td>
+                    <td>cll. 2 Av.15</td>
+                    <td>300124834</td>
+                    <td>EleHer@gmail.com</td>
+                    <td>
+                        <a class="btn-a" href="#modal-editar">
+                            <img src="./images/pencil-fill.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn-a" href="#modal-eliminar">
+                            <img src="./images/delete-bin-5-line.png" alt="eliminar">
+                        </q>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>123456789</td>
+                    <td>Elena Maribel</td>
+                    <td>Hernandez Rodriguez</td>
+                    <td>cll. 2 Av.15</td>
+                    <td>300124834</td>
+                    <td>EleHer@gmail.com</td>
+                    <td>
+                        <a class="btn-a" href="#modal-editar">
+                            <img src="./images/pencil-fill.png" alt="editar">
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn-a" href="#modal-eliminar">
+                            <img src="./images/delete-bin-5-line.png" alt="eliminar">
+                        </q>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer class="footer footer-bottom">
+        CONSULTA GENERAL | CONSULTA ESPECIALIZADA VETERINARIA | CARDIOLOGÍA VETERINARIA | DERMATOLOGÍA VETERINARIA | MÉTODOS DIAGNÓSTICOS | RAYOS X DIGITAL | ECOGRAFÍA | ENDOSCOPIA VETERINARIA | LABORATORIO CLÍNICO VETERINARIO | HEMOGRAMAS | QUÍMICAS SANGUÍNEAS | SDMA - DIAGNÓSTICO TEMPRANO DE INSUFICIENCIA RENAL | T 4 CANINA - DIAGNÓSTICO DE HIPOTIROIDISMO | PRUEBAS DE CORTISOL - DIAGNÓSTICO DE CUSHING | UPC - DIAGNÓSTICO DE ENFERMEDAD RENAL | PATOLOGÍA Y BIOPSIAS | MEDICIÓN DE PRESIÓN ARTERIAL DIGITAL | CIRUGÍA VETERINARIA GENERAL & ESPECIALIZADA | HOSPITALIZACIÓN MONITOREADA 7/24 | DIÁLISIS PERITONEAL | K-LÁSER - TÉCNICA INNOVADORA PARA EL MANEJO DEL DOLOR E INFLAMACIÓN | SERVICIO DE BAÑO Y PELUQUERÍA COSMÉTICO Y TERAPÉUTICO | DROGUERÍA VETERINARIA | MEDICINA FELINA ESPECIALIZADA | ONCOLOGÍA VETERINARIA | HOSPITALIZACIÓN Y CUIDADOS INTERMEDIOS | MEDICINA INTERNA VETERINARIA |
+    </footer>
+</body>
+</html>
